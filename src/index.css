@@ -6,4 +6,8 @@
 	body {
 		@apply bg-[#f1f2f6];
 	}
+
+	.container {
+		@apply !max-w-screen-lg;
+	}
 }
