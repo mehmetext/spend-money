@@ -18,6 +18,7 @@ export default function Money() {
 
 	useEffect(() => {
 		update(balance);
+		// eslint-disable-next-line
 	}, [balance]);
 
 	return (

@@ -21,6 +21,7 @@ export default function Product({ product }) {
 		} else {
 			setCount(0);
 		}
+		// eslint-disable-next-line
 	}, [basket.find((e) => e.id === product.id)]);
 
 	const addBasketHandle = () => {
@@ -54,10 +55,10 @@ export default function Product({ product }) {
 					onClick={removeBasketHandle}
 					disabled={count < 1}
 					className={classNames({
-						"rounded p-2 font-bold": true,
 						"bg-gradient-to-b from-pink-500 to-red-500 text-white":
 							count > 0,
 						"bg-gray-100 text-black": count < 1,
+						"rounded p-2 font-bold enabled:active:scale-90 transition-transform": true,
 					})}
 				>
 					Sell
@@ -77,11 +78,11 @@ export default function Product({ product }) {
 					onClick={addBasketHandle}
 					disabled={balance < product.productPrice}
 					className={classNames({
-						"rounded p-2 font-bold": true,
 						"bg-gradient-to-b from-brand1 to-brand2 text-white":
 							balance + 1 > product.productPrice,
 						"bg-gray-100 text-black":
 							balance < product.productPrice,
+						"rounded p-2 font-bold enabled:active:scale-90 transition-transform": true,
 					})}
 				>
 					Buy
